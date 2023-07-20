@@ -16,13 +16,24 @@ function App() {
   }, []);
   console.log(data);
   return (
-    <div className="page-container">
-      <div className="info">
-        <h2>Name : {data.biography["full-name"]}</h2>
+    Object.keys(data).length && (
+      <div className="page-container">
+        <div className="info">
+          <table>
+            <tr>
+              <td>Hero Name:</td>
+              <td>{data.name}</td>
+            </tr>
+            <tr>
+              <td>Original Name:</td>
+              <td>{data.biography["full-name"]}</td>
+            </tr>
+          </table>
+        </div>
+        <img src={data.image.url} alt="" className="avatar" />
+        <div className="stat"></div>
       </div>
-      <img src={data.image.url} alt="" className="avatar" />
-      <div className="stat"></div>
-    </div>
+    )
   );
 }
 
