@@ -11,22 +11,34 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-
-.message-display {
+.message-page {
+  text-align: center;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
-.message {
+.message-page input {
+  margin-right: 10px;
+}
+
+.response {
+  margin-top: 20px;
   padding: 5px 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
+}
+
+.message-box {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize: vertical;
+  overflow-y: auto;
+}
+
+.message-box::placeholder {
+  color: #aaa;
 }
