@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(0.15turn, #7d89a8, rgb(29, 30, 45));
+  min-height: 100vh;
 }
 
 .avatar {
@@ -11,10 +12,23 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+
 .message-page {
   text-align: center;
   margin-top: 20px;
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+
 }
+nav a {
+  color: white;
+  font-size: 1.5rem;
+
 
 .message-page input {
   margin-right: 10px;
@@ -25,6 +39,19 @@ body {
   padding: 5px 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
+
+  padding: 30px;
+}
+nav a:hover {
+  text-decoration: 3px underline;
+}
+.welcome {
+  color: white;
+  font-size: 1.5rem;
+}
+table {
+  border: 1px solid black;
+
 }
 
 .message-box {
