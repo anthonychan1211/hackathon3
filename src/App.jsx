@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<ProtectedRoute redirectTo="/login" />}>
           <Route index element={<Home />}></Route>
+          <Route path="/message" element={<Message />} />
         </Route>
         <Route path="login" element={<Login />}></Route>
-        <Route path="/message" element={<Message />} />
       </Routes>
     </AuthProvider>
   );
