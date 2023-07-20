@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../contexts";
 
