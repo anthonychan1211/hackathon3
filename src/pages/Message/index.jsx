@@ -16,9 +16,9 @@ const Message = () => {
     <>
       <Outlet />
       <div className="message-page">
-        <h1>Message to Iron Man:</h1>
         {!responseMessage ? (
           <>
+            <h1>Message to Iron Man:</h1>
             <textarea
               value={message}
               onChange={handleChange}
@@ -26,7 +26,9 @@ const Message = () => {
               className="message-box"
               required
             />
-            <button onClick={handleSendMessage}>Send it</button>
+            <button onClick={handleSendMessage} className="send">
+              Send it
+            </button>
           </>
         ) : (
           <div className="response">{responseMessage}</div>
