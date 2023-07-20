@@ -1,5 +1,6 @@
 import { useAuth } from "../../contexts";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { user } = useAuth();
@@ -18,6 +19,9 @@ export default function Home() {
   return (
     <>
       <h1>Hello {user}!</h1>
+      <div>
+        <Link to="/message">Message me</Link>
+      </div>
       {Object.keys(data).length > 0 && ( // Check if data is not empty before rendering
         <div className="page-container">
           <div className="info">
