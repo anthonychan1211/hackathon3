@@ -23,7 +23,8 @@ export default function Login() {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="log-in-form" onSubmit={handleSubmit}>
+      <h1 className="log-in-title">Sign up to message Iron Man</h1>
       <input
         type="text"
         onChange={handleInput}
@@ -33,7 +34,7 @@ export default function Login() {
         ref={inputRef}
       />
       <br />
-      <input type="submit" />
+      <button type="submit">Submit</button>
     </form>
   );
 }

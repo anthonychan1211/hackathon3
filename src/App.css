@@ -10,8 +10,13 @@ body {
 .page-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
 }
-
+.page-container img {
+  display: block;
+  margin: 0 auto;
+}
 .message-page {
   text-align: center;
   margin-top: 20px;
@@ -26,19 +31,23 @@ nav {
 nav a {
   color: white;
   font-size: 1.5rem;
+  padding-inline: 15px;
 }
 
-.message-page input {
-  margin-right: 10px;
+.message-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .response {
   margin-top: 20px;
-  padding: 5px 10px;
+  padding: 50px;
   background-color: #f0f0f0;
   border-radius: 5px;
-
   padding: 30px;
+  font-size: 2rem;
+  box-shadow: 0 0 15px black;
 }
 nav a:hover {
   text-decoration: 3px underline;
@@ -47,20 +56,21 @@ nav a:hover {
   color: white;
   font-size: 1.5rem;
 }
-
+table {
+  padding: 30px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
 td {
   font-size: 1.9rem;
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
-  padding: 15px;
-}
-table {
-  border: 1px solid black;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 40px;
+  color: white;
 }
 
 .message-box {
-  width: 100%;
-  min-height: 100px;
+  width: 50%;
+  min-height: 200px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -68,8 +78,54 @@ table {
   outline: none;
   resize: vertical;
   overflow-y: auto;
+  box-shadow: 0 0 20px rgb(47, 47, 52);
 }
 
 .message-box::placeholder {
   color: #aaa;
+}
+.send {
+  display: block;
+  margin: 20px auto;
+  background-color: rgb(45, 45, 52);
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.send:hover {
+  box-shadow: 2px 2px 10px rgb(44, 45, 50);
+  transform: translate(-2px, -2px);
+}
+.log-in-form {
+  text-align: center;
+}
+.log-in-title {
+  color: white;
+  margin: 60px;
+  font-size: 3rem;
+}
+.log-in-form input {
+  font-size: 1.8rem;
+  padding: 12px;
+}
+.log-in-form button {
+  margin: 20px;
+  font-size: 1.5rem;
+  padding: 15px;
+  background-color: rgb(45, 45, 52);
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.log-in-form button:hover {
+  box-shadow: 2px 2px 10px rgb(44, 45, 50);
+  transform: translate(-2px, -2px);
 }
