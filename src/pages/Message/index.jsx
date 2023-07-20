@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 const Message = () => {
   const [message, setMessage] = useState("");
   const [responseMessage, setResponseMessage] = useState("");
@@ -13,23 +13,26 @@ const Message = () => {
   };
 
   return (
-    <div className="message-page">
-      <h1>Message to Iron Man:</h1>
-      {!responseMessage ? (
-        <>
-          <textarea
-            value={message}
-            onChange={handleChange}
-            placeholder="Type your message..."
-            className="message-box"
-            required
-          />
-          <button onClick={handleSendMessage}>Send it</button>
-        </>
-      ) : (
-        <div className="response">{responseMessage}</div>
-      )}
-    </div>
+    <>
+      <Outlet />
+      <div className="message-page">
+        <h1>Message to Iron Man:</h1>
+        {!responseMessage ? (
+          <>
+            <textarea
+              value={message}
+              onChange={handleChange}
+              placeholder="Type your message..."
+              className="message-box"
+              required
+            />
+            <button onClick={handleSendMessage}>Send it</button>
+          </>
+        ) : (
+          <div className="response">{responseMessage}</div>
+        )}
+      </div>
+    </>
   );
 };
 
