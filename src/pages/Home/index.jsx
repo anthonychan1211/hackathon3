@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   const [data, setData] = useState({});
@@ -16,7 +15,6 @@ export default function Home() {
 
   return (
     <>
-
       {Object.keys(data).length > 0 && ( // Check if data is not empty before rendering
         <div className="page-container">
           <div className="info">

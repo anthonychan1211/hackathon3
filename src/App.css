@@ -12,23 +12,21 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-
 .message-page {
   text-align: center;
   margin-top: 20px;
-
+}
 nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 15px;
   align-items: center;
-
 }
 nav a {
   color: white;
   font-size: 1.5rem;
-
+}
 
 .message-page input {
   margin-right: 10px;
@@ -50,16 +48,14 @@ nav a:hover {
   font-size: 1.5rem;
 }
 
-
 td {
   font-size: 1.9rem;
   border-bottom: 1px solid black;
   border-collapse: collapse;
   padding: 15px;
-
+}
 table {
   border: 1px solid black;
-
 }
 
 .message-box {
@@ -76,5 +72,4 @@ table {
 
 .message-box::placeholder {
   color: #aaa;
-
 }
